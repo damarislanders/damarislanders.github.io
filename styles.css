@@ -13,7 +13,7 @@
 	 font-family: "Saira Extra Condensed", sans-serif;
 }
  body span.highlight {
-	 color: #54a0ff;
+	 color: #a0cf8d;
 }
  h1, h2, h3, h4, h5, h6 {
 	 color: #343a40;
@@ -179,16 +179,20 @@
  main section#projects {
 	 padding-top: 5rem;
 }
+
+/*
  main section#projects .project-container {
 	 width: 100%;
 	 display: grid;
 	 grid-template-columns: 1fr;
 	 grid-column-gap: 0.5rem;
 }
+*/
+
  main section#projects .project-container .project-tile a img {
 	 width: 100%;
 	 height: auto;
-	 filter: grayscale(100%);
+	 /*filter: grayscale(100%);*/
 }
  main section#projects .project-container .project-tile a img:hover {
 	 filter: grayscale(0);
