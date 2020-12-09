@@ -1,393 +1,284 @@
 @import url("https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400&display=swap");
-
-$primary-color: #54a0ff;
-
-$primary-text-color: #6c757d;
-$secondary-text-color: #343a40;
-
-$primary-font: "Saira Extra Condensed", sans-serif;
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+ * {
+	 margin: 0;
+	 padding: 0;
+	 box-sizing: border-box;
 }
-
-html {
-  scroll-behavior: smooth;
+ html {
+	 scroll-behavior: smooth;
 }
-
-body {
-  min-width: 320px;
-  color: $primary-text-color;
-  font-family: $primary-font;
-
-  span.highlight {
-    color: $primary-color;
-  }
+ body {
+	 min-width: 320px;
+	 color: #6c757d;
+	 font-family: "Saira Extra Condensed", sans-serif;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $secondary-text-color;
-  font-family: $primary-font;
+ body span.highlight {
+	 color: #54a0ff;
 }
-
-// Header
-header {
-  width: 100%;
-  padding: 1rem;
-  background-color: $primary-color;
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 99;
-
-  nav {
-    .portrait {
-      text-align: center;
-      display: none;
-
-      img {
-        width: 100%;
-        max-width: 160px;
-        border-radius: 100%;
-        border: 6px solid rgba(255, 255, 255, 0.3);
-      }
-    }
-
-    ul {
-      display: flex;
-      justify-content: flex-end;
-      list-style: none;
-
-      li {
-        margin-left: 1rem;
-
-        a {
-          color: white;
-          font-size: 1.2rem;
-          font-family: $primary-font;
-          font-weight: bold;
-          text-decoration: none;
-          opacity: 0.5;
-          letter-spacing: 1.5px;
-
-          &:hover {
-            opacity: 0.9;
-          }
-        }
-      }
-    }
-  }
+ h1, h2, h3, h4, h5, h6 {
+	 color: #343a40;
+	 font-family: "Saira Extra Condensed", sans-serif;
 }
-
-// Main
-main {
-  width: 100%;
-
-  section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 1rem;
-    border-bottom: 1px solid lighten($primary-text-color, 50);
-    padding-top: 5rem;
-
-    .section-heading {
-      font-size: 4rem;
-      color: $secondary-text-color;
-      text-transform: uppercase;
-      margin-bottom: 3rem;
-    }
-  }
-
-  section#welcome-section {
-    h1 {
-      div:first-child {
-        font-size: 2.5rem;
-        font-weight: 500;
-        line-height: 0.5;
-      }
-
-      div:last-child {
-        color: $secondary-text-color;
-        font-size: 5.5rem;
-      }
-    }
-
-    .info {
-      font-weight: 600;
-      font-size: 1.3rem;
-      text-transform: uppercase;
-    }
-
-    p {
-      font-size: 1.3rem;
-      margin: 2rem 0 1rem 0;
-    }
-
-    .contacts {
-      a {
-        width: 3rem;
-        height: 3rem;
-
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-
-        color: white;
-        background-color: $secondary-text-color;
-        font-size: 1.5rem;
-        text-decoration: none;
-        border-radius: 100%;
-        margin-right: 0.5rem;
-
-        &:hover {
-          color: $primary-color;
-        }
-      }
-    }
-  }
-
-  section#experience {
-    padding-top: 5rem;
-    .experience {
-      margin-bottom: 2.5rem;
-
-      h2 {
-        font-size: 2rem;
-        text-transform: uppercase;
-      }
-
-      h3 {
-        font-size: 1.5rem;
-        color: $primary-text-color;
-        text-transform: uppercase;
-      }
-
-      div {
-        color: $primary-color;
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-bottom: 1rem;
-      }
-
-      p {
-        font-size: 1.3rem;
-      }
-    }
-  }
-
-  section#skills {
-    padding-top: 5rem;
-
-    h2 {
-      font-size: 2rem;
-      color: $primary-text-color;
-      text-transform: uppercase;
-    }
-
-    .icons {
-      margin: 0.5rem 0 2rem 0;
-
-      i {
-        cursor: pointer;
-        margin-right: 1rem;
-        font-size: 3rem;
-
-        &.fa-html5:hover {
-          color: #e9633c;
-        }
-
-        &.fa-css3-alt:hover {
-          color: #2862e9;
-        }
-
-        &.fa-js:hover {
-          color: #f1d43b;
-        }
-
-        &.fa-react:hover {
-          color: #49b7e8;
-        }
-        &.fa-bootstrap:hover {
-          color: #533b78;
-        }
-        &.fa-sass:hover {
-          color: #c85e93;
-        }
-      }
-    }
-
-    ul {
-      list-style: square;
-
-      li {
-        font-size: 1.3rem;
-        margin-left: 2rem;
-      }
-    }
-  }
-
-  section#projects {
-    padding-top: 5rem;
-
-    .project-container {
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-column-gap: 0.5rem;
-
-      .project-tile {
-        a {
-          img {
-            width: 100%;
-            height: auto;
-
-            filter: grayscale(100%);
-
-            &:hover {
-              filter: grayscale(0);
-            }
-          }
-        }
-      }
-    }
-  }
+ header {
+	 width: 100%;
+	 padding: 1rem;
+	 background-color: #54a0ff;
+	 position: sticky;
+	 top: 0;
+	 left: 0;
+	 z-index: 99;
 }
-
-@media screen and (min-width: 480px) {
-  main {
-    section#projects {
-      .project-container {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-  }
+ header nav .portrait {
+	 text-align: center;
+	 display: none;
 }
-
-@media screen and (min-width: 568px) {
-  main {
-    section#experience {
-      .experience {
-        display: grid;
-        grid-template-columns: auto auto;
-
-        h2 {
-          grid-column: 1 / span 2;
-          grid-row: 1 / span 1;
-          line-height: 1;
-        }
-
-        h3 {
-          grid-column: 1 / span 2;
-          margin-bottom: 0.5rem;
-        }
-
-        div {
-          grid-column: 2 / span 1;
-          grid-row: 1 / span 1;
-        }
-
-        p {
-          grid-column: 1 / span 2;
-        }
-      }
-    }
-  }
+ header nav .portrait img {
+	 width: 100%;
+	 max-width: 160px;
+	 border-radius: 100%;
+	 border: 6px solid rgba(255, 255, 255, 0.3);
 }
-
-@media screen and (min-width: 720px) {
-  main {
-    section#projects {
-      .project-container {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-  }
+ header nav ul {
+	 display: flex;
+	 justify-content: flex-end;
+	 list-style: none;
 }
-
-@media screen and (min-width: 1024px) {
-  body {
-    display: grid;
-    grid-template-columns: auto auto;
-  }
-
-  header {
-    height: 100%;
-    max-height: 100vh;
-
-    nav {
-      width: 15vw;
-      max-width: 300px;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      .portrait {
-        display: block;
-      }
-
-      ul {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        li {
-          margin: 0.6rem 0;
-
-          a {
-            font-size: 1.5rem;
-          }
-        }
-      }
-    }
-  }
-
-  main {
-    section {
-      padding: 0 3rem;
-    }
-
-    section#experience {
-      .experience {
-        display: grid;
-        grid-template-columns: auto auto;
-
-        h2 {
-          grid-column: 1 / span 2;
-          grid-row: 1 / span 1;
-          line-height: 1;
-        }
-
-        h3 {
-          grid-column: 1 / span 2;
-          margin-bottom: 0.5rem;
-        }
-
-        div 
-          grid-column: 2 / span 1;
-          grid-row: 1 / span 1;
-        }
-      }
-    }
-  }
+ header nav ul li {
+	 margin-left: 1rem;
 }
-
-@media screen and (min-width: 1240px) {
-  main {
-    section#projects {
-      .project-container {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-  }
+ header nav ul li a {
+	 color: white;
+	 font-size: 1.2rem;
+	 font-family: "Saira Extra Condensed", sans-serif;
+	 font-weight: bold;
+	 text-decoration: none;
+	 opacity: 0.5;
+	 letter-spacing: 1.5px;
+}
+ header nav ul li a:hover {
+	 opacity: 0.9;
+}
+ main {
+	 width: 100%;
+}
+ main section {
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+	 width: 100%;
+	 min-height: 100vh;
+	 padding: 0 1rem;
+	 border-bottom: 1px solid #f3f4f5;
+	 padding-top: 5rem;
+}
+ main section .section-heading {
+	 font-size: 4rem;
+	 color: #343a40;
+	 text-transform: uppercase;
+	 margin-bottom: 3rem;
+}
+ main section#welcome-section h1 div:first-child {
+	 font-size: 2.5rem;
+	 font-weight: 500;
+	 line-height: 0.5;
+}
+ main section#welcome-section h1 div:last-child {
+	 color: #343a40;
+	 font-size: 5.5rem;
+}
+ main section#welcome-section .info {
+	 font-weight: 600;
+	 font-size: 1.3rem;
+	 text-transform: uppercase;
+}
+ main section#welcome-section p {
+	 font-size: 1.3rem;
+	 margin: 2rem 0 1rem 0;
+}
+ main section#welcome-section .contacts a {
+	 width: 3rem;
+	 height: 3rem;
+	 display: inline-flex;
+	 justify-content: center;
+	 align-items: center;
+	 color: white;
+	 background-color: #343a40;
+	 font-size: 1.5rem;
+	 text-decoration: none;
+	 border-radius: 100%;
+	 margin-right: 0.5rem;
+}
+ main section#welcome-section .contacts a:hover {
+	 color: #54a0ff;
+}
+ main section#experience {
+	 padding-top: 5rem;
+}
+ main section#experience .experience {
+	 margin-bottom: 2.5rem;
+}
+ main section#experience .experience h2 {
+	 font-size: 2rem;
+	 text-transform: uppercase;
+}
+ main section#experience .experience h3 {
+	 font-size: 1.5rem;
+	 color: #6c757d;
+	 text-transform: uppercase;
+}
+ main section#experience .experience div {
+	 color: #54a0ff;
+	 font-size: 1.2rem;
+	 font-weight: 600;
+	 margin-bottom: 1rem;
+}
+ main section#experience .experience p {
+	 font-size: 1.3rem;
+}
+ main section#skills {
+	 padding-top: 5rem;
+}
+ main section#skills h2 {
+	 font-size: 2rem;
+	 color: #6c757d;
+	 text-transform: uppercase;
+}
+ main section#skills .icons {
+	 margin: 0.5rem 0 2rem 0;
+}
+ main section#skills .icons i {
+	 cursor: pointer;
+	 margin-right: 1rem;
+	 font-size: 3rem;
+}
+ main section#skills .icons i.fa-html5:hover {
+	 color: #e9633c;
+}
+ main section#skills .icons i.fa-css3-alt:hover {
+	 color: #2862e9;
+}
+ main section#skills .icons i.fa-js:hover {
+	 color: #f1d43b;
+}
+ main section#skills .icons i.fa-react:hover {
+	 color: #49b7e8;
+}
+ main section#skills .icons i.fa-bootstrap:hover {
+	 color: #533b78;
+}
+ main section#skills .icons i.fa-sass:hover {
+	 color: #c85e93;
+}
+ main section#skills ul {
+	 list-style: square;
+}
+ main section#skills ul li {
+	 font-size: 1.3rem;
+	 margin-left: 2rem;
+}
+ main section#projects {
+	 padding-top: 5rem;
+}
+ main section#projects .project-container {
+	 width: 100%;
+	 display: grid;
+	 grid-template-columns: 1fr;
+	 grid-column-gap: 0.5rem;
+}
+ main section#projects .project-container .project-tile a img {
+	 width: 100%;
+	 height: auto;
+	 filter: grayscale(100%);
+}
+ main section#projects .project-container .project-tile a img:hover {
+	 filter: grayscale(0);
+}
+ @media screen and (min-width: 480px) {
+	 main section#projects .project-container {
+		 grid-template-columns: repeat(2, 1fr);
+	}
+}
+ @media screen and (min-width: 568px) {
+	 main section#experience .experience {
+		 display: grid;
+		 grid-template-columns: auto auto;
+	}
+	 main section#experience .experience h2 {
+		 grid-column: 1 / span 2;
+		 grid-row: 1 / span 1;
+		 line-height: 1;
+	}
+	 main section#experience .experience h3 {
+		 grid-column: 1 / span 2;
+		 margin-bottom: 0.5rem;
+	}
+	 main section#experience .experience div {
+		 grid-column: 2 / span 1;
+		 grid-row: 1 / span 1;
+	}
+	 main section#experience .experience p {
+		 grid-column: 1 / span 2;
+	}
+}
+ @media screen and (min-width: 720px) {
+	 main section#projects .project-container {
+		 grid-template-columns: repeat(3, 1fr);
+	}
+}
+ @media screen and (min-width: 1024px) {
+	 body {
+		 display: grid;
+		 grid-template-columns: auto auto;
+	}
+	 header {
+		 height: 100%;
+		 max-height: 100vh;
+	}
+	 header nav {
+		 width: 15vw;
+		 max-width: 300px;
+		 height: 100%;
+		 display: flex;
+		 flex-direction: column;
+		 justify-content: center;
+	}
+	 header nav .portrait {
+		 display: block;
+	}
+	 header nav ul {
+		 flex-direction: column;
+		 align-items: center;
+		 justify-content: center;
+	}
+	 header nav ul li {
+		 margin: 0.6rem 0;
+	}
+	 header nav ul li a {
+		 font-size: 1.5rem;
+	}
+	 main section {
+		 padding: 0 3rem;
+	}
+	 main section#experience .experience {
+		 display: grid;
+		 grid-template-columns: auto auto;
+	}
+	 main section#experience .experience h2 {
+		 grid-column: 1 / span 2;
+		 grid-row: 1 / span 1;
+		 line-height: 1;
+	}
+	 main section#experience .experience h3 {
+		 grid-column: 1 / span 2;
+		 margin-bottom: 0.5rem;
+	}
+	 main section#experience .experience div {
+		 grid-column: 2 / span 1;
+		 grid-row: 1 / span 1;
+	}
+}
+ @media screen and (min-width: 1240px) {
+	 main section#projects .project-container {
+		 grid-template-columns: repeat(4, 1fr);
+	}
 }
