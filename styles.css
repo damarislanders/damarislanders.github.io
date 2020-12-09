@@ -9,11 +9,11 @@
 }
  body {
 	 min-width: 320px;
-	 color: #a0cf8d;
+	 color: #6c757d;
 	 font-family: "Saira Extra Condensed", sans-serif;
 }
  body span.highlight {
-	 color: #54a0ff;
+	 color: #a0cf8d;
 }
  h1, h2, h3, h4, h5, h6 {
 	 color: #343a40;
