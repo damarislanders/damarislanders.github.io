@@ -1,5 +1,4 @@
-// Optional: You can add JavaScript here to enhance the site functionality.
-// For example, smooth scroll for navigation links
+// smooth scroll for navigation links
 document.querySelectorAll('nav ul li a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -9,3 +8,8 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     });
   });
   
+// toggle dark theme
+function toggleTheme() {
+document.body.classList.toggle('dark-theme');
+}
+    

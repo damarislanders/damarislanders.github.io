@@ -3,66 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Portfolio</title>
+  <title>Your Name | Data Science Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
+  <!-- Navigation -->
+  <nav class="navbar">
     <div class="container">
-      <h1>Your Name</h1>
-      <p>PhD Candidate | Data Scientist</p>
+      <h1>Your Name | Data Science</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <!-- Dark mode toggle -->
+      <button class="toggle-theme" onclick="toggleTheme()">🌙</button>
     </div>
-  </header>
-
-  <!-- Navigation Bar -->
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
   </nav>
 
-  <!-- Main Content Section -->
-  <main>
-    <section id="home" class="container">
-      <h2>Welcome to My Portfolio</h2>
-      <p>This is a collection of my projects and research as a PhD candidate in Mathematical Ecology and aspiring data scientist.</p>
-    </section>
+  <!-- Profile Section -->
+  <section id="home" class="profile container">
+    <div class="profile-left">
+      <img src="profile.jpg" alt="Your Name" class="profile-img">
+      <h2>Your Name</h2>
+      <p>PhD Candidate in Mathematical Ecology</p>
+      <p>Data Scientist</p>
+      <a href="#">University of Example</a>
+      <div class="social-icons">
+        <a href="#"><img src="email-icon.png" alt="Email"></a>
+        <a href="#"><img src="google-scholar.png" alt="Google Scholar"></a>
+        <a href="#"><img src="github.png" alt="GitHub"></a>
+        <a href="#"><img src="twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="cv.png" alt="CV"></a>
+      </div>
+    </div>
+    <div class="profile-right">
+      <h2>Biography</h2>
+      <p>I am a PhD candidate in Mathematical Ecology and an aspiring data scientist. My research focuses on applying AI and machine learning techniques to ecological data to model species interactions and population dynamics.</p>
+      <p>I am always open to collaborations and networking opportunities in ecology, data science, and AI. Feel free to reach out!</p>
+    </div>
+  </section>
 
-    <section id="about" class="container">
-      <h2>About Me</h2>
-      <p>I am currently pursuing a PhD in Mathematical Ecology and working on applying machine learning and AI techniques to ecology and environmental science.</p>
-    </section>
-
-    <section id="projects" class="container">
-      <h2>Projects</h2>
+  <!-- Interests and Education Section -->
+  <section id="research" class="info container">
+    <div class="info-item">
+      <h3>Interests</h3>
       <ul>
-        <li><a href="#">Project 1: Data Science in Ecology</a></li>
-        <li><a href="#">Project 2: Machine Learning Models</a></li>
-        <li><a href="#">Project 3: Cloud Deployment</a></li>
+        <li>Data Science & Machine Learning</li>
+        <li>Population Ecology</li>
+        <li>Coral Reef Ecology</li>
+        <li>Geospatial Analysis</li>
+        <li>AI for Drug Discovery</li>
       </ul>
-    </section>
-
-    <section id="publications" class="container">
-      <h2>Publications</h2>
+    </div>
+    <div id="education" class="info-item">
+      <h3>Education</h3>
       <ul>
-        <li><a href="#">Publication 1: Paper on Ecological Modeling</a></li>
-        <li><a href="#">Publication 2: Machine Learning in Ecology</a></li>
+        <li><strong>PhD in Mathematical Ecology</strong> - University of Example (2022-2024)</li>
+        <li><strong>MSc in Data Science</strong> - Example University (2018-2020)</li>
+        <li><strong>BSc in Environmental Science</strong> - Example University (2015-2018)</li>
       </ul>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer>
+  <footer id="contact">
     <div class="container">
       <p>&copy; 2024 Your Name</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- JavaScript for smooth scrolling and dark theme toggle -->
+  <script>
+    // Smooth scroll for navigation links
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Toggle dark theme
+    function toggleTheme() {
+      document.body.classList.toggle('dark-theme');
+    }
+  </script>
 </body>
 </html>
