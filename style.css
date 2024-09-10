@@ -133,6 +133,38 @@ body {
 	margin-top: 10px;
 	font-size: 1.1rem;
   }
+
+  /* Work Experience Section */
+#experience {
+	padding: 40px 0;
+  }
+  
+  .experience-item {
+	margin-bottom: 40px;
+  }
+  
+  .experience-item h3 {
+	font-size: 1.5rem;
+	margin-bottom: 5px;
+  }
+  
+  .experience-item p {
+	font-size: 1.1rem;
+	margin-bottom: 10px;
+  }
+  
+  .experience-item strong {
+	font-weight: bold;
+  }
+  
+  .experience-item ul {
+	list-style: none;
+	padding-left: 0;
+  }
+  
+  .experience-item ul li {
+	margin-bottom: 5px;
+  }  
   
   /* Footer */
   footer {
