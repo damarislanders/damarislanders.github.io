@@ -35,7 +35,8 @@ header nav ul li a:hover {
 
 .portrait img {
   width: 150px;
-  height: 150px;
+  max-width: 100%;
+  height: auto;
   border-radius: 50%;
   display: block;
   margin: 0 auto;
@@ -43,6 +44,8 @@ header nav ul li a:hover {
 
 main {
   padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 section {
@@ -63,6 +66,7 @@ section {
 
 .project-tile img {
   width: 300px;
+  max-width: 100%;
   height: auto;
   border: 2px solid #ccc;
   border-radius: 5px;
@@ -92,4 +96,21 @@ footer {
 
 .contacts a:hover {
   color: #007bff;
+}
+
+main p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+}
+
+.info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contacts {
+  text-align: center;
+  margin-top: 10px;
 }
